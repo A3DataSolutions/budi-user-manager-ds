@@ -1,0 +1,85 @@
+{
+  "type": "datasource",
+  "metadata": {},
+  "schema": {
+    "docs": "https://docs.budibase.com",
+    "friendlyName": "Budi User Manager",
+    "type": "API",
+    "description": "Performs a basic HTTP calls to a URL",
+    "datasource": {
+      "url": {
+        "type": "string",
+        "required": true
+      },
+      "cookie": {
+        "type": "string",
+        "required": false
+      },
+      "user": {
+        "display": "User",
+        "type": "string",
+        "required": false
+      },
+      "password": {
+        "display": "Password",
+        "type": "string",
+        "required": false
+      }
+    },
+    "query": {
+      "create": {
+        "type": "json"
+      },
+      "read": {
+        "type": "fields",
+        "fields": {
+          "userId": {
+            "display": "userId",
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "update": {
+        "type": "fields",
+        "fields": {
+          "userId": {
+            "display": "userId",
+            "type": "string",
+            "required": false
+          },
+          "firstName": {
+            "display": "First Name",
+            "type": "string",
+            "required": false
+          },
+          "lastName": {
+            "display": "Last Name",
+            "type": "string",
+            "required": false
+          },
+          "rolesJson": {
+            "display": "Roles JSON",
+            "type": "json",
+            "required": false
+          }
+        }
+      },
+      "delete": {
+        "type": "fields",
+        "fields": {
+          "userId": {
+            "display": "userId",
+            "type": "string",
+            "required": false
+          },
+          "rolesJson": {
+            "display": "Roles JSON",
+            "type": "json",
+            "required": false
+          }
+        }
+      }
+    }
+  }
+}
